@@ -25,7 +25,7 @@
 
         <ctrl:HideableToolbarItem
             Command="{Binding OpenVolunteersFiltersCommand}"
-            IconPlatform="filters_icon"
+            IconPlatform="ico_sup_filter"
             IsVisible="{Binding CanFilterVolunteers}"
             Order="Primary"
             Priority="0"
@@ -42,14 +42,15 @@
     </ContentPage.ToolbarItems>
 
     <Grid>
+        <!--  INDICATOR  -->
+        <ctrl:CustomActivityIndicatorControl />
+
         <!--  Chat page  -->
         <temp:ChatTemplate IsVisible="{Binding PartyId, Converter={StaticResource IsNotNullConverter}}" />
 
         <!--  Volunteer list page  -->
         <temp:ChooseVolunteerTemplate IsVisible="{Binding PartyId, Converter={StaticResource IsNullConverter}}" />
 
-        <!--  INDICATOR  -->
-        <ctrl:CustomActivityIndicatorControl />
     </Grid>
 
 </v:BaseContentPage>

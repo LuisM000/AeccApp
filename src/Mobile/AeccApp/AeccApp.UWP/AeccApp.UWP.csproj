@@ -109,9 +109,6 @@
     <Content Include="..\AeccApp.Droid\Resources\drawable\exit_icon.png">
       <Link>Assets\exit_icon.png</Link>
     </Content>
-    <Content Include="..\AeccApp.Droid\Resources\drawable\filters_icon.png">
-      <Link>Assets\filters_icon.png</Link>
-    </Content>
     <Content Include="..\AeccApp.Droid\Resources\drawable\from_home.png">
       <Link>Assets\from_home.png</Link>
     </Content>
@@ -130,6 +127,18 @@
     <Content Include="..\AeccApp.Droid\Resources\drawable\icon.png">
       <Link>Assets\icon.png</Link>
     </Content>
+    <Content Include="..\AeccApp.Droid\Resources\drawable\ico_clean_filter.png">
+      <Link>Assets\ico_clean_filter.png</Link>
+    </Content>
+    <Content Include="..\AeccApp.Droid\Resources\drawable\ico_girl.png">
+      <Link>Assets\ico_girl.png</Link>
+    </Content>
+    <Content Include="..\AeccApp.Droid\Resources\drawable\ico_man.png">
+      <Link>Assets\ico_man.png</Link>
+    </Content>
+    <Content Include="..\AeccApp.Droid\Resources\drawable\ico_sup_filter.png">
+      <Link>Assets\ico_sup_filter.png</Link>
+    </Content>
     <Content Include="..\AeccApp.Droid\Resources\drawable\location_pin.png">
       <Link>Assets\location_pin.png</Link>
     </Content>
@@ -144,6 +153,9 @@
     </Content>
     <Content Include="..\AeccApp.Droid\Resources\drawable\mock_new_firma_convenio.jpg">
       <Link>Assets\mock_new_firma_convenio.jpg</Link>
+    </Content>
+    <Content Include="..\AeccApp.Droid\Resources\drawable\PopUp_Ico_thumbsdown.png">
+      <Link>Assets\PopUp_Ico_thumbsdown.png</Link>
     </Content>
     <Content Include="..\AeccApp.Droid\Resources\drawable\profile.png">
       <Link>Assets\profile.png</Link>
@@ -168,9 +180,6 @@
     </Content>
     <Content Include="..\AeccApp.Droid\Resources\drawable\round_new_here.png">
       <Link>Assets\round_new_here.png</Link>
-    </Content>
-    <Content Include="..\AeccApp.Droid\Resources\drawable\round_no_profile_image.png">
-      <Link>Assets\round_no_profile_image.png</Link>
     </Content>
     <Content Include="..\AeccApp.Droid\Resources\drawable\round_no_profile_image_v2.png">
       <Link>Assets\round_no_profile_image_v2.png</Link>

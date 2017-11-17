@@ -29,7 +29,8 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
@@ -171,6 +172,7 @@
       <Link>Renderers\XLabs\ImageButtonRenderer.Shared.cs</Link>
     </Compile>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\TabbedPageRenderer.cs" />
     <Compile Include="Services\LocationProviderSettings.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Renderers\NonScrollableListViewRenderer.cs" />
@@ -178,8 +180,12 @@
     <Compile Include="Services\FileProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Entitlements.plist" />
-    <None Include="Info.plist" />
+    <None Include="Entitlements.plist">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <BundleResource Include="Resources\AppIcons\Contents.json" />
   </ItemGroup>
   <ItemGroup>
@@ -199,7 +205,7 @@
       <Version>4.6.2</Version>
     </PackageReference>
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
-      <Version>2.0.8</Version>
+      <Version>2.0.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Identity.Client">
       <Version>1.1.0-preview</Version>
@@ -223,10 +229,10 @@
       <Version>0.4.7</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.GoogleMaps">
-      <Version>2.2.0</Version>
+      <Version>2.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.RangeSlider">
-      <Version>0.7.13</Version>
+      <Version>0.7.14</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -234,9 +240,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\exit_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\filters_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\gender_female.png" />
@@ -255,9 +258,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\requests_tab_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_no_profile_image.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\round_no_profile_image_v2.png" />
@@ -387,6 +387,33 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\mock_new_firma_convenio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\AeccApp.Droid\Resources\drawable\logoHeader.png">
+      <Link>Resources\logoHeader.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\AeccApp.Droid\Resources\drawable\ico_girl.png">
+      <Link>Resources\ico_girl.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\AeccApp.Droid\Resources\drawable\ico_man.png">
+      <Link>Resources\ico_man.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ico_sup_filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ico_sup_filter%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PopUp_Ico_thumbsdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PopUp_Ico_thumbsdown%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -116,6 +116,15 @@ namespace AeccApp.Internationalization.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Danos un momento, estamos conectando con el voluntario..
+        /// </summary>
+        public static string ChatConnectingPopupText {
+            get {
+                return ResourceManager.GetString("ChatConnectingPopupText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Abre un nuevo chat, elige y habla con el voluntario que más se adapte a tus preferencias y necesidades..
         /// </summary>
         public static string ChatListViewText {
@@ -224,7 +233,7 @@ namespace AeccApp.Internationalization.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No hay voluntarios para el filtro que has pueto..
+        ///   Looks up a localized string similar to No hay voluntarios para el filtro que has puesto..
         /// </summary>
         public static string ChatViewThereAreNoVolunteersFiltered {
             get {
@@ -350,7 +359,7 @@ namespace AeccApp.Internationalization.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Editar.
+        ///   Looks up a localized string similar to Editar biografía.
         /// </summary>
         public static string CommonEdit {
             get {
@@ -373,6 +382,15 @@ namespace AeccApp.Internationalization.Properties {
         public static string CommonGender {
             get {
                 return ResourceManager.GetString("CommonGender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Género:.
+        /// </summary>
+        public static string CommonGenderTitle {
+            get {
+                return ResourceManager.GetString("CommonGenderTitle", resourceCulture);
             }
         }
         
@@ -1025,7 +1043,16 @@ namespace AeccApp.Internationalization.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ha habido un problema, intentalo mas tarde.
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string Nothing {
+            get {
+                return ResourceManager.GetString("Nothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¡Oh oh!.
         /// </summary>
         public static string PopupChatEventConnectionRejectedNotVolunteer {
             get {

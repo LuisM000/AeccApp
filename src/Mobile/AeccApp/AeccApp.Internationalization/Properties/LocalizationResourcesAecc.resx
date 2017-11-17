@@ -135,6 +135,9 @@
   <data name="AllYourRequestsListOops" xml:space="preserve">
     <value>¡Ups!</value>
   </data>
+  <data name="ChatConnectingPopupText" xml:space="preserve">
+    <value>Danos un momento, estamos conectando con el voluntario.</value>
+  </data>
   <data name="ChatListViewText" xml:space="preserve">
     <value>Abre un nuevo chat, elige y habla con el voluntario que más se adapte a tus preferencias y necesidades.</value>
   </data>
@@ -172,7 +175,7 @@
     <value>No hay voluntarios. Intentalo más tarde</value>
   </data>
   <data name="ChatViewThereAreNoVolunteersFiltered" xml:space="preserve">
-    <value>No hay voluntarios para el filtro que has pueto.</value>
+    <value>No hay voluntarios para el filtro que has puesto.</value>
   </data>
   <data name="ChatViewViewVolunteerProfile" xml:space="preserve">
     <value>Perfil del voluntario</value>
@@ -214,13 +217,16 @@
     <value>Fecha</value>
   </data>
   <data name="CommonEdit" xml:space="preserve">
-    <value>Editar</value>
+    <value>Editar biografía</value>
   </data>
   <data name="CommonFilters" xml:space="preserve">
     <value>Filtros</value>
   </data>
   <data name="CommonGender" xml:space="preserve">
     <value>Género</value>
+  </data>
+  <data name="CommonGenderTitle" xml:space="preserve">
+    <value>Género:</value>
   </data>
   <data name="CommonIsYourFirstTime" xml:space="preserve">
     <value>¿Es tu primera vez aqui?</value>
@@ -438,8 +444,11 @@
   <data name="NoConnectionViewTextTitle" xml:space="preserve">
     <value>¡Vaya!</value>
   </data>
+  <data name="Nothing" xml:space="preserve">
+    <value />
+  </data>
   <data name="PopupChatEventConnectionRejectedNotVolunteer" xml:space="preserve">
-    <value>Ha habido un problema, intentalo mas tarde</value>
+    <value>¡Oh oh!</value>
   </data>
   <data name="PopupChatEventConnectionRejectedVolunteer" xml:space="preserve">
     <value>Petición rechazada</value>

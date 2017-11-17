@@ -6,8 +6,14 @@
     xmlns:ctrl="clr-namespace:AeccApp.Core.Controls"
     xmlns:ctrlRange="clr-namespace:Xamarin.RangeSlider.Forms;assembly=Xamarin.RangeSlider.Forms"
     xmlns:ctrlXlabs="clr-namespace:XLabs.Forms.Controls"
+    xmlns:cv="clr-namespace:AeccApp.Core.Converters"
     xmlns:vPop="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     BackgroundColor="{StaticResource SeeThrough}">
+    <vPop:PopupPage.Resources>
+        <ResourceDictionary>
+            <cv:BooleanToColorConverter x:Key="BooleanToColorConverter" />
+        </ResourceDictionary>
+    </vPop:PopupPage.Resources>
 
     <ContentView
         Margin="20"
@@ -23,6 +29,7 @@
                 <Label
                     Margin="10"
                     HorizontalOptions="Center"
+                    Style="{StaticResource LightGreyMediumTitleLabelStyle}"
                     Text="{Binding [CommonAge]}" />
 
                 <ctrlRange:RangeSlider
@@ -45,6 +52,7 @@
                 <Label
                     Margin="10"
                     HorizontalOptions="Center"
+                    Style="{StaticResource LightGreyMediumTitleLabelStyle}"
                     Text="{Binding [CommonGender]}" />
 
 
@@ -57,33 +65,61 @@
                     <ctrl:CustomImage
                         Grid.Column="0"
                         Margin="20"
-                        BackgroundColor="Beige"
+                        BackgroundColor="{Binding GenderWomen, Converter={StaticResource BooleanToColorConverter}}"
                         HeightRequest="100"
                         HorizontalOptions="Center"
-                        SourcePlatform="gender_female"
+                        SourcePlatform="ico_girl"
                         VerticalOptions="Center"
-                        WidthRequest="100" />
+                        WidthRequest="100">
+                        <ctrl:CustomImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SwitchGenderCommand}" CommandParameter="m" />
+                        </ctrl:CustomImage.GestureRecognizers>
+                    </ctrl:CustomImage>
 
                     <ctrl:CustomImage
                         Grid.Column="1"
                         Margin="20"
-                        BackgroundColor="Aqua"
+                        BackgroundColor="{Binding GenderMen, Converter={StaticResource BooleanToColorConverter}}"
                         HeightRequest="100"
                         HorizontalOptions="Center"
-                        SourcePlatform="gender_male"
+                        SourcePlatform="ico_man"
                         VerticalOptions="Center"
-                        WidthRequest="100" />
+                        WidthRequest="100">
+                        <ctrl:CustomImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SwitchGenderCommand}" CommandParameter="h" />
+                        </ctrl:CustomImage.GestureRecognizers>
+                    </ctrl:CustomImage>
 
                 </Grid>
 
 
                 <BoxView HeightRequest="1" Color="LightGray" />
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                    <Grid>
+                        <ctrl:CustomShapeDrawing
+                            Margin="0,-7,6,1"
+                            BorderColor="#4286f4"
+                            HeightRequest="12"
+                            HorizontalOptions="Center"
+                            PointsShapeCoordinate="0.7/0, 0/0, 0.9/1"
+                            ShapeColor="#4286f4"
+                            WidthRequest="14" />
+                        <ctrlXlabs:ImageButton
+                            BorderColor="LightGray"
+                            BorderRadius="90"
+                            Command="{Binding ResetFiltersCommand}"
+                            HorizontalOptions="EndAndExpand"
+                            SourcePlatform="ico_clean_filter"
+                            Style="{StaticResource SmallImageButtonStyle}"
+                            VerticalOptions="Center" />
+                    </Grid>
 
-                <Button
-                    Margin="10"
-                    Command="{Binding ApplyFiltersCommand}"
-                    Style="{StaticResource ButtonStyle}"
-                    Text="{Binding [CommonApplyFilters]}" />
+                    <Button
+                        Margin="10"
+                        Command="{Binding ApplyFiltersCommand}"
+                        Style="{StaticResource ButtonStyle}"
+                        Text="{Binding [CommonApplyFilters]}" />
+                </StackLayout>
             </StackLayout>
 
         </ContentView>
